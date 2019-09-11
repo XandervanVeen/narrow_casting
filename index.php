@@ -73,7 +73,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
               <div class="content1">
                   <div class="reminder">
                       <div class="title">
-                          <h2>- Herrineringen -</h2>
+                          <h2>- Herinneringen -</h2>
                       </div>
                       <p>
                           <?php
@@ -229,10 +229,10 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
   }
 </script>
 <script>
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Breda,nl&units=metric&APPID=67c140928453a2bdfc185fe267d98ccc", function(data){
+    $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Breda,nl&units=metric&APPID=67c140928453a2bdfc185fe267d98ccc", function(data){
     console.log(data);
 
-    var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+    var icon = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
     var temp1 = data.main.temp;
     var temp = Math.round(temp1);
     temp += '°';
