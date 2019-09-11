@@ -2,7 +2,7 @@
 
 $dbHost = 'localhost';
 $dbUser = 'amo';
-$dbPass = 'amo';
+$dbPass = 'GYoT62P47e7v6O0a!';
 $dbName = 'narrow_casting';
 
 $db = new PDO(
