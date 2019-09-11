@@ -1,8 +1,8 @@
 <?php
 
 $dbHost = 'localhost';
-$dbUser = 'root';
-$dbPass = '';
+$dbUser = 'amo';
+$dbPass = 'amo';
 $dbName = 'narrow_casting';
 
 $db = new PDO(
