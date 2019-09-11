@@ -446,6 +446,19 @@ main {
   height: 50px;
   border-radius: 30px;
 }
+.agenda {
+  width: 100%;
+}
+.agenda a {
+  text-decoration: none;
+}
+.calendar-items-info {
+  font-size: 1.5em;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  width: 25%;
+}
 /* ==========================================================================
    /Login
    ========================================================================== */

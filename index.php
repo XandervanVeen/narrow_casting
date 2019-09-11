@@ -85,20 +85,21 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                       </p>
                   </div>
                   <div class="agenda">
-                      <div class="title">
-                          <h2>- Agenda -</h2>
-                      </div>
-                      <p>
-                          <?php
-                                  $days = array(
-                                      "Maandag"   => "Monday",
-                                      "Dinsdag"   => "Tuesday",
-                                      "Woensdag"  => "Wednesday",
-                                      "Donderdag" => "Thursday",
-                                      "Vrijdag"   => "Friday",
-                                      "Zaterdag"  => "Saturday",
-                                      "Zondag"    => "Sunday"
-                                  );
+                      <a href="infocalendar.php" class="calendar-info">
+                          <div class="title">
+                              <h2>- Agenda -</h2>
+                          </div>
+                          <p>
+                              <?php
+                              $days = array(
+                                  "Maandag"   => "Monday",
+                                  "Dinsdag"   => "Tuesday",
+                                  "Woensdag"  => "Wednesday",
+                                  "Donderdag" => "Thursday",
+                                  "Vrijdag"   => "Friday",
+                                  "Zaterdag"  => "Saturday",
+                                  "Zondag"    => "Sunday"
+                              );
                               for ($i = 0; $i < 4; $i++){
                                   if (!empty($calendars[$i])) {
                                       $dayOfWeek = date("l", strtotime($calendars[$i]['date']));
@@ -111,8 +112,9 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                                       echo $dayString . " - " . $calendars[$i]['date']. " - " . $calendars[$i]['title'] . "<br>";
                                   }
                               }
-                          ?>
-                      </p>
+                              ?>
+                          </p>
+                      </a>
                   </div>
                   <div class="rules">
                       <div class="title">
