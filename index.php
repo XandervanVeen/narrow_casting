@@ -84,38 +84,36 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                           ?>
                       </p>
                   </div>
-                  <div class="agenda">
-                      <a href="infocalendar.php" class="calendar-info">
-                          <div class="title">
-                              <h2>- Agenda -</h2>
-                          </div>
-                          <p>
-                              <?php
-                              $days = array(
-                                  "Maandag"   => "Monday",
-                                  "Dinsdag"   => "Tuesday",
-                                  "Woensdag"  => "Wednesday",
-                                  "Donderdag" => "Thursday",
-                                  "Vrijdag"   => "Friday",
-                                  "Zaterdag"  => "Saturday",
-                                  "Zondag"    => "Sunday"
-                              );
-                              for ($i = 0; $i < 4; $i++){
-                                  if (!empty($calendars[$i])) {
-                                      $dayOfWeek = date("l", strtotime($calendars[$i]['date']));
-                                      foreach ($days as $key => $val) {
-                                          if ($val == $dayOfWeek) {
-                                              $dayString = $key;
-                                          }
+                  <a href="infocalendar.php" class="agenda">
+                      <div class="title">
+                          <h2>- Agenda -</h2>
+                      </div>
+                      <p>
+                          <?php
+                          $days = array(
+                              "Maandag"   => "Monday",
+                              "Dinsdag"   => "Tuesday",
+                              "Woensdag"  => "Wednesday",
+                              "Donderdag" => "Thursday",
+                              "Vrijdag"   => "Friday",
+                              "Zaterdag"  => "Saturday",
+                              "Zondag"    => "Sunday"
+                          );
+                          for ($i = 0; $i < 4; $i++){
+                              if (!empty($calendars[$i])) {
+                                  $dayOfWeek = date("l", strtotime($calendars[$i]['date']));
+                                  foreach ($days as $key => $val) {
+                                      if ($val == $dayOfWeek) {
+                                          $dayString = $key;
                                       }
-                                      $dayString = substr($dayString, 0, 2);
-                                      echo $dayString . " - " . $calendars[$i]['date']. " - " . $calendars[$i]['title'] . "<br>";
                                   }
+                                  $dayString = substr($dayString, 0, 2);
+                                  echo $dayString . " - " . $calendars[$i]['date']. " - " . $calendars[$i]['title'] . "<br>";
                               }
-                              ?>
-                          </p>
-                      </a>
-                  </div>
+                          }
+                          ?>
+                      </p>
+                  </a>
                   <div class="rules">
                       <div class="title">
                           <h2>- Regels -</h2>
