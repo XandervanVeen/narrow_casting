@@ -129,7 +129,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                   </div>
               </div>
               <div class="content2">
-                  <div class="reistijden">
+                  <a href="travelOverview.php" class="reistijden">
                       <div class="title">
                           <h2>- Reistijden -</h2>
                       </div>
@@ -168,7 +168,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                       $dateM = date('i', time());
                       $dateS = date('i', time());
                       ?>
-                  </div>
+                  </a>
                   <div class="news">
                       <div class="title">
                           <h2>- Nieuws -</h2>
