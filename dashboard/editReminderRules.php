@@ -27,9 +27,9 @@ $rules = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <header>
-        <div class="logo-shadow">
+        <a href="dashboard.php" class="logo-shadow">
             <img src="../img/amo_logo.png">
-        </div>
+        </a>
     </header>
     <main>
         <div class="content">

@@ -10,7 +10,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     $projectinfo = $prepare->fetch(PDO::FETCH_ASSOC);//haalt op welke user bezig is met een team aanmaken.
 }
 else {
-    header("Location: index.php");
+    header("Location: dashboard/dashboard.php");
 }
 ?>
 <!doctype html>
@@ -40,7 +40,7 @@ else {
 
 <body onload="startTime()">
 <header>
-    <a href="index.php" class="logo-shadow">
+    <a href="dashboard/dashboard.php" class="logo-shadow">
         <img src="img/amo_logo.png">
     </a>
     <div class="weather-clock-shadow">

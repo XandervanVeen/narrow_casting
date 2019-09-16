@@ -32,7 +32,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 <body>
     <div class="login-wrapper">
         <div class="login-field">
-            <h2>Login</h2>
+            <h2>- Login -</h2>
             <form action="loginController.php" method="post">
                 <input type="hidden" name="type" value="login">
                 <input class="t-type-text" type="text" id="username" name="username" required placeholder="Gebruikersnaam">

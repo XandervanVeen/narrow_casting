@@ -28,17 +28,20 @@ else {
     <script src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
-
     <script src="script.js"></script>
 </head>
 
 <body>
     <div class="login-wrapper">
-        <div class="login-field">
-            <a href="logout.php">Uitloggen</a>
-            <a href="../editInfo.php">Informatie aanpassen</a>
-            <a href="editReminderRules.php">Regels en herrineringen aanpassen</a>
-            <a href="calendar.php">Agenda</a>
+        <div class="dashboard-field">
+            <div class="dashboard-field-1">
+                <a href="logout.php">Uitloggen</a>
+            </div>
+            <div class="dashboard-field-2">
+                <a href="../editInfo.php">Informatie aanpassen</a>
+                <a href="editReminderRules.php">Regels en herrineringen aanpassen</a>
+                <a href="calendar.php">Agenda</a>
+            </div>
         </div>
     </div>
 </body>
