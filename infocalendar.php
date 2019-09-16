@@ -35,10 +35,16 @@ $calendars = $query->fetchAll(PDO::FETCH_ASSOC);
     <img src="img/amo_logo.png">
   </a>
   <div class="weather-clock-shadow">
-    <div class="weather">
-      <div class="title">
-        <h2>- Weer -</h2>
+      <div class="date">
+          <div class="title">
+              <h2>- Datum -</h2>
+          </div>
+          <div class="date-text"><div id="date"></div></div>
       </div>
+      <div class="weather">
+          <div class="title">
+              <h2>- Weer -</h2>
+          </div>
       <div class="weather-info">
         <p>Breda</p>
         <p class="temp"></p>
@@ -123,5 +129,26 @@ $calendars = $query->fetchAll(PDO::FETCH_ASSOC);
     setInterval(function(){
         location.replace("index.php");
     },60000);
+</script>
+<script>
+    //    Date
+    function startTime() {
+        var today = new Date();
+        var mo = today.getMonth() + 1 ;
+        var d = today.getDate();
+        var y = today.getFullYear();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        m = checkTime(m);
+        document.getElementById('clock').innerHTML =
+            "<p>" + h + ":" + m + "</p>";
+        document.getElementById('date').innerHTML =
+            "<p>" + d + "/" + mo + "/" + y + "</p>";
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
 </script>
 </html>

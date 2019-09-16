@@ -50,7 +50,13 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
           <img src="img/amo_logo.png">
         </div>
         <div class="weather-clock-shadow">
-          <div class="weather">
+            <div class="date">
+                <div class="title">
+                    <h2>- Datum -</h2>
+                </div>
+                <div class="date-text"><div id="date"></div></div>
+            </div>
+            <div class="weather">
               <div class="title">
                 <h2>- Weer -</h2>
               </div>
@@ -214,6 +220,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
       </main>
 </body>
 <script>
+//    Time
   function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -229,6 +236,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
   }
 </script>
 <script>
+//    Weather api
     $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Breda,nl&units=metric&APPID=67c140928453a2bdfc185fe267d98ccc", function(data){
     console.log(data);
 
@@ -245,5 +253,26 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
     setInterval(function(){
     location.reload();
     },60000);
+</script>
+<script>
+//    Date
+    function startTime() {
+        var today = new Date();
+        var mo = today.getMonth() + 1 ;
+        var d = today.getDate();
+        var y = today.getFullYear();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        m = checkTime(m);
+        document.getElementById('clock').innerHTML =
+            "<p>" + h + ":" + m + "</p>";
+        document.getElementById('date').innerHTML =
+            "<p>" + d + "/" + mo + "/" + y + "</p>";
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
 </script>
 </html>
