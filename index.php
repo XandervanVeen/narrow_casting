@@ -139,6 +139,11 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                       <div class="title">
                           <h2>- Reistijden -</h2>
                       </div>
+                      <div class="reistijden-title">
+                          <h2>Bus oude baan</h2>
+                          <img src="img/bus.png" alt="bus">
+                      </div>
+                      <table class="reistijden-data">
                       <?php
                       $json = file_get_contents('http://v0.ovapi.nl/stopareacode/BdOud');
                       $obj = json_decode($json);
@@ -165,8 +170,10 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                           }
                       }
                       foreach ($passes as $pass) {
-                          echo $pass['LinePublicNumber'] . " - " . substr($pass['ExpectedArrivalTime'],11, 5);
-                          echo "<br>";
+                          echo "<tr class='reistijden-data-row'>";
+                          echo "<th style='text-align: left;'>" . $pass['LinePublicNumber'] . "</th>";
+                          echo "<th style='text-align: right;'>" . substr($pass['ExpectedArrivalTime'],11, 5) . "</th>";
+                          echo "</tr>";
                       }
                       $timezone = date_default_timezone_get();
                       date_default_timezone_set($timezone);
@@ -174,8 +181,9 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                       $dateM = date('i', time());
                       $dateS = date('i', time());
                       ?>
+                      </table>
                   </a>
-                  <div class="news">
+                  <a href="newsOverview.php" class="news">
                       <div class="title">
                           <h2>- Nieuws -</h2>
                       </div>
@@ -198,7 +206,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                           }
                           ?>
                       </div>
-                  </div>
+                  </a>
               </div>
               <div class="content3">
                   <a href="info.php" class="project-info">
@@ -255,7 +263,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
     },60000);
 </script>
 <script>
-//    Date
+    //    Date
     function startTime() {
         var today = new Date();
         var mo = today.getMonth() + 1 ;

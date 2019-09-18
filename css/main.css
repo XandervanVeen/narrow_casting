@@ -303,6 +303,7 @@ main {
 }
 .news {
   width: 100%;
+  text-decoration: none;
 }
 .articles {
   height: 100%;
@@ -687,8 +688,50 @@ main {
   background-color: #dd0000;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.reistijden-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #4B9DFF solid 2px;
+  width: 96%;
+  margin: 0 auto;
+}
+.reistijden-title img {
+  width: 10%;
+}
+.reistijden-data {
+  width: 96%;
+  margin: 0 auto;
+}
+.reistijden-data th {
+  font-size: 140%;
+}
 /* ==========================================================================
    /Bus
+   ========================================================================== */
+/* ==========================================================================
+   News
+   ========================================================================== */
+.newsTitle{
+  text-align: center;
+  border-bottom: #4B9DFF solid 4px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.newsInfo{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /*padding: 0% 0% 0% 0%;*/
+}
+.newsLayout{
+  height: 100%;
+  padding: 1% 0% 0% 0%;
+}
+/* ==========================================================================
+   /News
    ========================================================================== */
 /* ==========================================================================
    Fonts
