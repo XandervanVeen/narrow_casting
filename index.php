@@ -94,7 +94,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                       <div class="title">
                           <h2>- Agenda -</h2>
                       </div>
-                      <p>
+                      <div class="agenda-flex">
                           <?php
                           $days = array(
                               "Maandag"   => "Monday",
@@ -105,20 +105,44 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                               "Zaterdag"  => "Saturday",
                               "Zondag"    => "Sunday"
                           );
+                          $months = array(
+                              "Jan"   => "Jan",
+                              "Feb"   => "Feb",
+                              "Mar"   => "Mar",
+                              "Apr"   => "Apr",
+                              "Mei"   => "May",
+                              "Jun"   => "Jun",
+                              "Jul"   => "Jul",
+                              "Aug"   => "Aug",
+                              "Sep"   => "Sep",
+                              "Okt"   => "Oct",
+                              "Nov"   => "Nov",
+                              "Dec"   => "Dec",
+                          );
                           for ($i = 0; $i < 4; $i++){
                               if (!empty($calendars[$i])) {
                                   $dayOfWeek = date("l", strtotime($calendars[$i]['date']));
+                                  $monthOfYear = date("M", strtotime($calendars[$i]['date']));
                                   foreach ($days as $key => $val) {
                                       if ($val == $dayOfWeek) {
                                           $dayString = $key;
                                       }
                                   }
+                                  foreach ($months as $key => $val) {
+                                      if ($val == $monthOfYear) {
+                                          $monthString = $key;
+                                      }
+                                  }
                                   $dayString = substr($dayString, 0, 2);
-                                  echo $dayString . " - " . $calendars[$i]['date']. " - " . $calendars[$i]['title'] . "<br>";
+                                  echo "<div class='agenda-flex-item'>";
+                                  echo "<p>" . $dayString . "</p>";
+                                  echo "<p>" . $monthOfYear . " " . substr($calendars[$i]['date'], 8, 2) . "</p>";
+                                  echo "<p>" . $calendars[$i]['title'] . "</p>";
+                                  echo "</div>";
                               }
                           }
                           ?>
-                      </p>
+                      </div>
                   </a>
                   <div class="rules">
                       <div class="title">
