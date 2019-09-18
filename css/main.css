@@ -148,7 +148,7 @@ header {
   padding-right: 0;
 }
 .logo-shadow img {
-  width: 100%;
+  width: 86.5%;
   padding: 1% 0% 1% 1.5%;
 }
 .weather-clock-shadow {
@@ -438,7 +438,7 @@ main {
 }
 .login-field {
   width: 40%;
-  height: 40%;
+  padding: 0 0 10px 0;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
   align-items: center;
@@ -468,6 +468,9 @@ main {
   border: none;
   border-radius: 30px;
   margin-bottom: 10px;
+}
+.t-type-text {
+  margin-top: 10px;
 }
 .t-type-text:focus, .b-type-text:focus, .type-submit:focus {
   outline: none;
@@ -526,7 +529,6 @@ main {
 }
 .dashboard-field {
   width: 40%;
-  height: 40%;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -542,6 +544,148 @@ main {
   flex-direction: column;
   align-items: center;
   font-size: 150%;
+}
+.calendar-edit-overview {
+  width: 96%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 1% 0 1% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calendar-edit-overview table {
+  margin: 1% 0 0 0;
+}
+.calendar-overview-add {
+  color: white;
+  background-color: #4B9DFF;
+  border: none;
+  padding: 5px 15px 5px 15px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 140%;
+  text-decoration: none;
+}
+.add-calendar-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.t-calendar-input {
+  color: black;
+  width: 80%;
+  height: 40px;
+  padding: 5px 15px 5px 15px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px 0 10px 0;
+}
+.b-calendar-input {
+  color: black;
+  width: 80%;
+  height: 40px;
+  padding: 5px 15px 5px 15px;
+  border: none;
+  border-radius: 30px;
+  margin: 0 0 10px 0;
+}
+.t-calendar-input:focus, .b-calendar-input:focus, .calendar-submit:focus {
+  outline: none;
+}
+.calendar-submit {
+  color: white;
+  background-color: #4B9DFF;
+  border: none;
+  padding: 5px 15px 5px 15px;
+  width: 85.85%;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 140%;
+}
+.calendar-go-back {
+  font-size: 120%;
+  margin: 5px 0 0 0;
+}
+.calendar-field {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  animation: fade-in-scale 0.5s ease;
+  animation-fill-mode: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calendar-field-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.e-t-calendar-input {
+  color: black;
+  width: 190%;
+  height: 40px;
+  padding: 5px 15px 5px 15px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px 0 0 0;
+}
+.e-b-calendar-input {
+  color: black;
+  width: 190%;
+  height: 40px;
+  padding: 5px 15px 5px 15px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px 0 10px 0;
+}
+.e-calendar-submit {
+  color: white;
+  background-color: #4B9DFF;
+  border: none;
+  padding: 5px 15px 5px 15px;
+  width: 203.3%;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 140%;
+  margin: 0 0 10px 0;
+}
+.e-d-calendar-submit {
+  color: white;
+  background-color: red;
+  border: none;
+  padding: 5px 15px 5px 15px;
+  width: 203.3%;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 140%;
+}
+.e-calendar-field {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  animation: fade-in-scale 0.5s ease;
+  animation-fill-mode: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.e-t-calendar-input, .e-b-calendar-input, .e-calendar-submit, .e-d-calendar-submit {
+  outline: none;
+}
+.e-calendar-submit:active, .calendar-submit:active, .calendar-overview-add:active {
+  background-color: #3d7fd0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.e-d-calendar-submit:active {
+  background-color: #dd0000;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 /* ==========================================================================
    /Bus

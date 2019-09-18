@@ -34,37 +34,31 @@ else {
     <script src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
-
     <script src="script.js"></script>
 </head>
 
 <body>
 <div class="login-wrapper">
-    <div class="login-field">
-        <div>
-            <h1>Wijzig een afspraak</h1>
-            <form class="edit-calendar-item" action="calendarController.php" method="post">
+    <div class="e-calendar-field">
+        <div class="title">
+            <h2>Wijzig een afspraak</h2>
+        </div>
+        <div class="calendar-field-wrapper">
+            <form class="add-calendar-item" action="calendarController.php" method="post">
                 <input type="hidden" name="type" value="edit-calendar-item">
-
-                <input type="text" name="title" id="title" required value="<?php echo $calendarItem['title']?>">
-                <input type="date" id="item-date" name="item-date" value="<?php echo $calendarItem['date']?>" class="date">
+                <input class="e-t-calendar-input" type="text" name="title" id="title" required value="<?php echo $calendarItem['title']?>">
+                <input class="e-b-calendar-input" type="date" id="item-date" name="item-date" value="<?php echo $calendarItem['date']?>" class="date">
                 <input type="hidden" name="itemId" id="itemId" value="<?php echo $calendarItem['id']?>">
-
-                <input type="submit" value="Wijzig">
+                <input class="e-calendar-submit" type="submit" value="Wijzig">
             </form>
-
-            <form class="delete-calendar-item" action="calendarController.php" method="post">
+            <form class="add-calendar-item" action="calendarController.php" method="post">
                 <input type="hidden" name="type" value="delete-calendar-item">
                 <input type="hidden" name="calendarId" value="<?php echo $calendarItem['id']?>">
-                <input type="submit" value="Verwijder">
+                <input class="e-d-calendar-submit" type="submit" value="Verwijder">
             </form>
-        </div>
-
-                <a href="calendar.php">Ga terug</a>
+            <a class="calendar-go-back" href="calendar.php">Ga terug</a>
         </div>
     </div>
 </div>
 </body>
 </html>
-
-

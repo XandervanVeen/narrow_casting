@@ -103,7 +103,7 @@ $projectinfo = $prepare->fetch(PDO::FETCH_ASSOC);//haalt op welke user bezig is 
     );
 
     setInterval(function(){
-        location.replace("index.php");
+        location.replace("info.php");
     },60000);
 </script>
 <script>
