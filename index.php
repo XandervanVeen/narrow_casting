@@ -119,6 +119,7 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                               "Nov"   => "Nov",
                               "Dec"   => "Dec",
                           );
+                          $x = 0;
                           for ($i = 0; $i < 4; $i++){
                               if (!empty($calendars[$i])) {
                                   $dayOfWeek = date("l", strtotime($calendars[$i]['date']));
@@ -134,11 +135,12 @@ $reminders = $query->fetchAll(PDO::FETCH_ASSOC);
                                       }
                                   }
                                   $dayString = substr($dayString, 0, 2);
-                                  echo "<div class='agenda-flex-item'>";
+                                  echo "<div class='agenda-flex-item-{$x}'>";
                                   echo "<p>" . $dayString . "</p>";
                                   echo "<p>" . $monthOfYear . " " . substr($calendars[$i]['date'], 8, 2) . "</p>";
                                   echo "<p>" . $calendars[$i]['title'] . "</p>";
                                   echo "</div>";
+                                  $x++;
                               }
                           }
                           ?>
