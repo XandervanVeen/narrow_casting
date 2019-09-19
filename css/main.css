@@ -707,10 +707,29 @@ main {
   font-size: 140%;
 }
 .agenda-flex {
-  display: flex;
-
+  display: grid;
+  grid-template-areas:
+          'a b'
+          'c d';
+  justify-content: space-around;
+  text-align: center;
   width: 100%;
-  height: 100%;
+  height: 83%;
+  margin-top: 8px;
+}
+.agenda-flex-item-0 {
+  border-bottom: #4B9DFF solid 2px;
+  height: 90%;
+}
+.agenda-flex-item-1 {
+  border-bottom: #4B9DFF solid 2px;
+  height: 90%;
+}
+.agenda-flex-item-2 {
+  height: 78%;
+}
+.agenda-flex-item-3 {
+  height: 78%;
 }
 .agenda-grid-item {
   display: flex;
