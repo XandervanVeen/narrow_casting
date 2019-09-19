@@ -21,7 +21,7 @@ if ($_POST['type'] == 'edit'){
         ':id' => 1
 
     ]);
-    header("location: dashboard.php");
+    header("location: dashboard/dashboard.php");
     exit;
 
 }
