@@ -22,10 +22,10 @@ for ($i = 0; $i < $totalArticles; $i++){
         echo "</div>";
         echo "<div class='newsImg'>";
             if ($data['articles'][$i]['urlToImage'] == ""){
-                echo "<a href='{$data['articles'][$i]['url']}'><img style='width: 150px; height: 120px; padding: 10% 0% 10% 0%;' src='img/news-placeholder.png'></a>";
+                echo "<img style='width: 150px; height: 120px; padding: 10% 0% 10% 0%;' src='img/news-placeholder.png'>";
             }
             else {
-                echo "<a href='{$data['articles'][$i]['url']}'><img style='padding: 0% 10% 0% 10%;' src='{$data['articles'][$i]['urlToImage']}'></img></a>";
+                echo "<img style='padding: 0% 10% 0% 10%;' src='{$data['articles'][$i]['urlToImage']}'></img>";
             }
         echo "</div>";
     echo "</div>";

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc46e418-531b-40e7-a720-1370ac19fe8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/infoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/infoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/newsInfo.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +26,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/infoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+            <state relative-caret-position="418">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/newsInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,10 +124,10 @@
         <option value="$PROJECT_DIR$/dashboard/login.php" />
         <option value="$PROJECT_DIR$/dashboard/calendar.php" />
         <option value="$PROJECT_DIR$/newsOverview.php" />
-        <option value="$PROJECT_DIR$/newsInfo.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/infoController.php" />
+        <option value="$PROJECT_DIR$/newsInfo.php" />
       </list>
     </option>
   </component>
@@ -217,12 +231,12 @@
       <workItem from="1568805494918" duration="479000" />
       <workItem from="1568814030735" duration="5998000" />
       <workItem from="1568875000719" duration="116000" />
-      <workItem from="1568883137021" duration="1906000" />
+      <workItem from="1568883137021" duration="2393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113012000" />
+    <option name="totallyTimeSpent" value="113499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -559,8 +573,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/infoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        <state relative-caret-position="418">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

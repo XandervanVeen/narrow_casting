@@ -7,8 +7,6 @@ if($_SERVER['REQUEST_METHOD'] !== 'POST'){
 }
 
 if ($_POST['type'] == 'edit'){
-
-
     $sql = "UPDATE projectinfo SET title = :title, description = :description WHERE id = :id";
 
     $prepare =  $db->prepare($sql);
